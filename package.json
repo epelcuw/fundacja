@@ -1,0 +1,31 @@
+{
+  "name": "studiot-3d-bg",
+  "version": "1.0.0",
+  "description": "A React application with 3D background animations that react to scroll events.",
+  "main": "src/main.jsx",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "three": "^0.140.0",
+    "@react-three/fiber": "^8.0.0",
+    "@react-three/drei": "^8.0.0",
+    "vite": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite-plugin-glsl": "^1.0.0"
+  },
+  "keywords": [
+    "react",
+    "three.js",
+    "3d",
+    "animation",
+    "scroll"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
