@@ -1,47 +1,15 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
     overflow-x: hidden;
 }
 
-html, body {
-    height: 100%;
-}
-
-#root {
-    height: 100%;
-}
-
-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
-}
-
-.scroll-container {
-    position: relative;
-    overflow-y: scroll;
-    height: 100vh;
-}
-
-.scroll-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease;
-}
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #50d9d5;
+    outline-offset: 3px;
 }
