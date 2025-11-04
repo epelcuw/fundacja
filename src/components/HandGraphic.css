@@ -1,0 +1,53 @@
+.hand-graphic {
+  --hand-accent: var(--color-accent, #572cf2);
+  width: var(--hand-size, clamp(200px, 30vw, 360px));
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background: transparent;
+  border: 5px solid var(--hand-accent);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
+}
+
+.hand-graphic__layer {
+  position: absolute;
+  inset: -6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: multiply;
+  filter: saturate(0.2) contrast(1.3) brightness(1.05);
+}
+
+.hand-graphic__layer img {
+  width: 135%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.hand-graphic__layer--pink img {
+  transform: translate(-12%, -8%) rotate(-3deg) scale(1.05);
+}
+
+.hand-graphic__layer--blue {
+  mix-blend-mode: lighten;
+}
+
+.hand-graphic__layer--blue img {
+  transform: translate(8%, -4%) rotate(2deg) scale(1.02);
+}
+
+.hand-graphic__outline {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.hand-graphic--flip {
+  transform: scaleX(-1);
+}
