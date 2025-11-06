@@ -28,23 +28,6 @@ const focusAreas = [
   },
 ];
 
-const programHighlights = [
-  {
-    label: 'Mapa potrzeb pacjenta',
-    summary: 'Diagnozujemy punkty krytyczne w ścieżce pacjenta i rekomendujemy konkretne usprawnienia.',
-  },
-  {
-    label: 'Akademia personelu medycznego',
-    summary: 'Szkolimy zespoły medyczne z komunikacji, pracy z emocjami i nowych narzędzi edukacyjnych.',
-  },
-  {
-    label: 'Laboratorium innowacji',
-    summary: 'Łączymy pacjentów, lekarzy i innowatorów, by wdrażać nowoczesne rozwiązania w ochronie zdrowia.',
-  },
-];
-
-const filterTags = ['Temat', 'Długość', 'Data publikacji'];
-
 const podcastEpisodes = [
   {
     title: 'Ścieżka pacjenta: od diagnozy do terapii',
@@ -55,6 +38,11 @@ const podcastEpisodes = [
     title: 'Jak rozmawiać o planie leczenia',
     duration: '24:02',
     description: 'Praktyczne wskazówki dla pacjentów i rodzin dotyczące wspólnego podejmowania decyzji terapeutycznych.',
+  },
+  {
+    title: 'Technologie w służbie pacjenta',
+    duration: '26:48',
+    description: 'Co zmienia telemedycyna i jak przygotować się do zdalnej konsultacji – doświadczenia pacjentów i ekspertów IT.',
   },
 ];
 
@@ -147,7 +135,7 @@ const App = () => {
                   <a href="#support" className="btn btn--primary hero__cta" data-cursor="#572cf2">
                     Wesprzyj działania
                   </a>
-                  <a href="#videos" className="btn btn--ghost hero__cta" data-cursor="#572cf2">
+                  <a href="#podcasts" className="btn btn--ghost hero__cta" data-cursor="#572cf2">
                     Odkryj materiały
                   </a>
                 </div>
@@ -196,55 +184,33 @@ const App = () => {
             </div>
           </section>
 
-          <section id="videos" className="section section--tone-dark" data-scene="videos">
+          <section id="podcasts" className="section section--podcasts" data-scene="podcasts">
             <div className="section__inner">
-              <header className="section__header">
-                <span className="section__eyebrow" data-cursor="#572cf2">Programy edukacyjne</span>
-                <h2 className="section__title">Od diagnozy po wdrożenie rozwiązań.</h2>
+              <header className="section__header section__header--centered">
+                <span className="section__eyebrow" data-cursor="#572cf2">Podcasty</span>
+                <h2 className="section__title">Rozmowy z pacjentami, ekspertami i decydentami.</h2>
                 <p className="section__description">
-                  Udostępniamy materiały i narzędzia, które pomagają uporządkować ścieżkę pacjenta i wspierają zespoły medyczne.
+                  Posłuchaj inspirujących historii na wybranej platformie lub bezpośrednio na naszej stronie.
                 </p>
-                <div className="tag-list">
-                  {filterTags.map((tag) => (
-                    <span key={tag} className="tag" data-cursor="#572cf2">{tag}</span>
-                  ))}
+                <div className="tag-list tag-list--inline podcast__platforms">
+                  <a href="#spotify" className="tag tag--link" data-cursor="#572cf2">Spotify</a>
+                  <a href="#apple" className="tag tag--link" data-cursor="#572cf2">Apple Podcasts</a>
+                  <a href="#rss" className="tag tag--link" data-cursor="#572cf2">RSS</a>
                 </div>
               </header>
-              <div className="cards cards--grid">
-                {programHighlights.map((item) => (
-                  <article key={item.label} className="card card--program" data-cursor="#572cf2">
-                    <h3 className="card__title">{item.label}</h3>
-                    <p className="card__description">{item.summary}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section id="podcasts" className="section section--tone-warm" data-scene="podcasts">
-            <div className="section__inner section__split section__split--reverse">
-              <header className="section__header section__header--with-art">
-                <div className="section__header-copy">
-                  <span className="section__eyebrow" data-cursor="#572cf2">Podcasty</span>
-                  <h2 className="section__title">Rozmowy z pacjentami, ekspertami i decydentami.</h2>
-                  <p className="section__description">Posłuchaj na wybranej platformie lub bezpośrednio na naszej stronie.</p>
-                  <div className="tag-list tag-list--inline">
-                    <a href="#spotify" className="tag tag--link" data-cursor="#572cf2">Spotify</a>
-                    <a href="#apple" className="tag tag--link" data-cursor="#572cf2">Apple Podcasts</a>
-                    <a href="#rss" className="tag tag--link" data-cursor="#572cf2">RSS</a>
-                  </div>
-                </div>
-              </header>
-              <div className="cards cards--stack">
-                {podcastEpisodes.map((episode) => (
-                  <article key={episode.title} className="card card--horizontal" data-cursor="#572cf2">
-                    <div>
-                      <h3 className="card__title">{episode.title}</h3>
-                      <p className="card__description">{episode.description}</p>
+              <div className="cards cards--podcasts">
+                {podcastEpisodes.map((episode, index) => (
+                  <article key={episode.title} className="podcast-card" data-cursor="#572cf2">
+                    <span className="podcast-card__number">0{index + 1}</span>
+                    <div className="podcast-card__body">
+                      <h3 className="podcast-card__title">{episode.title}</h3>
+                      <p className="podcast-card__description">{episode.description}</p>
                     </div>
-                    <div className="card__meta">
-                      <span className="card__pill">{episode.duration}</span>
-                      <button type="button" className="btn btn--ghost" data-cursor="#572cf2">Odtwórz</button>
+                    <div className="podcast-card__footer">
+                      <span className="podcast-card__duration">{episode.duration}</span>
+                      <button type="button" className="podcast-card__cta" data-cursor="#572cf2">
+                        Posłuchaj
+                      </button>
                     </div>
                   </article>
                 ))}
