@@ -41,22 +41,22 @@
 .header__nav ul {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.75rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0.25rem;
 }
 
 .header__nav a {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem 0;
+  padding: 0.35rem 0;
   color: rgba(246, 247, 251, 0.75);
   text-transform: none;
   text-decoration: none;
-  letter-spacing: 0.04em;
-  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  font-size: 0.84rem;
   font-weight: 500;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
