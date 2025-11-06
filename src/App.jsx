@@ -30,22 +30,19 @@ const focusAreas = [
 
 const podcastEpisodes = [
   {
-    title: 'Ścieżka pacjenta: od diagnozy do terapii',
-    duration: '28:15',
+    title: 'V Forum Depresji',
+    duration: '3h18m,
     description: 'Jak skrócić czas od pierwszych objawów do specjalistycznej opieki — rozmowa z pacjentką onkologiczną i lekarzem.',
-    url: 'https://example.com/podcast/sciezka-pacjenta',
   },
   {
     title: 'Jak rozmawiać o planie leczenia',
     duration: '24:02',
     description: 'Praktyczne wskazówki dla pacjentów i rodzin dotyczące wspólnego podejmowania decyzji terapeutycznych.',
-    url: 'https://example.com/podcast/plan-leczenia',
   },
   {
     title: 'Technologie w służbie pacjenta',
     duration: '26:48',
     description: 'Co zmienia telemedycyna i jak przygotować się do zdalnej konsultacji – doświadczenia pacjentów i ekspertów IT.',
-    url: 'https://example.com/podcast/telemedycyna',
   },
 ];
 
@@ -62,12 +59,11 @@ const webinarRecords = [
 
 const projects = [
   {
-    title: 'Zdrowie psychiczne zaczyna się w jelitach! Kampania informacyjna',
-    summary:
-      'Kurs Mikrobioty nie tylko dla psychoterapeutów to projekt, którego celem jest dostarczenie uczestnikom wiedzy i praktycznych narzędzi, które mogą być wykorzystane w codziennej pracy z pacjentami, a także promowanie zdrowego stylu życia jako kluczowego elementu profilaktyki i leczenia zaburzeń psychicznych.',
+    title: 'Kampania „Zauważ objawy”',
+    summary: 'Ogólnopolska kampania o wczesnej diagnostyce chorób neurologicznych i dostępie do terapii.',
   },
   {
-    title: 'Pediatria – najnowsze rekomendacje i wytyczne.',
+    title: 'Projekt „Szpital Przyjazny Pacjentom”',
     summary: 'Audyt i wdrażanie standardów komunikacji w pięciu placówkach publicznych.',
   },
 ];
@@ -124,6 +120,7 @@ const App = () => {
           <section id="home" className="section section--hero" data-scene="home">
             <div className="section__inner hero__inner">
               <div className="hero__copy">
+                <span className="section__eyebrow" data-cursor="#572cf2">Instytut Wspierania i Edukacji Pacjentów</span>
                 <h1 className="hero__title">Wyrównujemy szanse pacjentów w drodze do zdrowia.</h1>
                 <p className="section__description">
                   Działamy, by komunikacja w ochronie zdrowia była jasna i partnerska, a każdy pacjent miał dostęp do rzetelnych
@@ -207,15 +204,9 @@ const App = () => {
                     </div>
                     <div className="podcast-card__footer">
                       <span className="podcast-card__duration">{episode.duration}</span>
-                      <a
-                        href={episode.url}
-                        className="podcast-card__cta"
-                        target="_blank"
-                        rel="noreferrer"
-                        data-cursor="#572cf2"
-                      >
+                      <button type="button" className="podcast-card__cta" data-cursor="#572cf2">
                         Posłuchaj
-                      </a>
+                      </button>
                     </div>
                   </article>
                 ))}
@@ -316,13 +307,13 @@ const App = () => {
           <footer className="footer" data-cursor="#572cf2">
             <div>
               <h4>Instytut Wspierania i Edukacji Pacjentów</h4>
-              <p>ul. Kasprzaka 6 , 00-100 Warszawa</p>
+              <p>ul. Kasprzaka 6 , 01-211 Warszawa</p>
             </div>
             <div className="footer__links">
               <a href="mailto:kontakt@fundacjapacjencka.org" data-cursor="#572cf2">
                 kontakt@fundacjapacjencka.org
               </a>
-              <a href="tel:+48123456789" data-cursor="#572cf2">
+              <a href="tel:+48" data-cursor="#572cf2">
                 +48 123 456 789
               </a>
             </div>
