@@ -52,15 +52,18 @@ body {
   color: inherit;
   background: inherit;
   overflow: visible;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
   --section-drip-height: clamp(70px, 12vw, 160px);
+  transform: translateY(60px);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .section.is-visible {
-  opacity: 1;
   transform: translateY(0);
+}
+
+.section.is-visible .section__inner {
+  opacity: 1;
 }
 
 .section:nth-of-type(1) { z-index: 36; }
@@ -135,6 +138,8 @@ body {
   gap: 2.5rem;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
 .section__split {
