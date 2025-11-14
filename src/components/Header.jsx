@@ -1,13 +1,17 @@
 import React from 'react';
 import './Header.css';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__inner">
         <div className="header__brand">
-          <span className="header__logo" data-cursor="#2596be">Instytut Wspierania i Edukacji Pacjentów</span>
-          <span className="header__tagline" data-cursor="#8f3608">Edukacja. Wsparcie. Równe szanse.</span>
+          <img src={logo} alt="Logo Instytutu" className="header__logo-mark" data-cursor="#8f3608" />
+          <div className="header__brand-text">
+            <span className="header__logo" data-cursor="#2596be">Instytut Wspierania i Edukacji Pacjentów</span>
+            <span className="header__tagline" data-cursor="#8f3608">Edukacja. Wsparcie. Równe szanse.</span>
+          </div>
         </div>
         <nav className="header__nav" aria-label="Główna nawigacja">
           <ul>

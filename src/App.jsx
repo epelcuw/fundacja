@@ -36,10 +36,10 @@ const podcastEpisodes = [
     url: 'https://www.e-medycyna.pl/v-forum-depresji',
   },
   {
-    title: 'Jak rozmawiać o planie leczenia',
-    duration: '24:02',
-    description: 'Praktyczne wskazówki dla pacjentów i rodzin dotyczące wspólnego podejmowania decyzji terapeutycznych.',
-    url: 'https://example.com/podcast/plan-leczenia',
+    title: 'Nikotyna: trucizna czy lek?',
+    duration: '48:02',
+    description: 'Eksperci psychiatrii i toksykologii o skutecznych strategiach walki z paleniem tytoniuaktyczne wskazówki dla pacjentów i rodzin dotyczące wspólnego podejmowania decyzji terapeutycznych.',
+    url: 'https://example.com/podcast/plan-leczenihttps://www.e-medycyna.pl/nikotyna-trucizna-czy-lek-eksperci-psychiatrii-i-toksykologii-o-skutecznych-strategiach-walki-z-paleniem-tytoniua',
   },
   {
     title: 'Technologie w służbie pacjenta',
@@ -52,11 +52,11 @@ const podcastEpisodes = [
 const webinarRecords = [
   {
     title: 'Koordynacja opieki w praktyce',
-    resources: 'Materiały do pobrania: notatki + prezentacja (PDF).',
+    
   },
   {
     title: 'Współpraca organizacji pacjenckich z samorządami',
-    resources: 'Materiały do pobrania: schemat procesu + checklista (PDF).',
+  
   },
 ];
 
@@ -153,8 +153,7 @@ const App = () => {
                 <span className="section__eyebrow" data-cursor="#572cf2">Dlaczego działamy</span>
                 <h2 className="section__title">Konsekwentnie podnosimy jakość komunikacji i edukacji zdrowotnej.</h2>
                 <p className="section__description">
-                  Łączymy pacjentów, lekarzy oraz instytucje, promując dialog, edukację i rozwiązania telemedyczne. Nasze działania
-                  wyrównują szanse w dostępie do wiedzy medycznej i nowoczesnych narzędzi zdrowotnych.
+                 
                 </p>
               </header>
               <div className="section__content">
@@ -228,7 +227,7 @@ const App = () => {
             <div className="section__inner">
               <header className="section__header">
                 <span className="section__eyebrow" data-cursor="#572cf2">Debaty i webinary</span>
-                <h2 className="section__title">Eksperckie spotkania z możliwością pobrania materiałów.</h2>
+                <h2 className="section__title">Eksperckie spotkania opiniotwórcze.</h2>
                 <p className="section__description">
                   Analizujemy aktualne wyzwania systemowe i udostępniamy konkretne rekomendacje dla partnerów.
                 </p>
@@ -240,7 +239,7 @@ const App = () => {
                     <p className="card__description">{item.resources}</p>
                     <div className="card__actions">
                       <a href="#watch" className="btn btn--ghost" data-cursor="#572cf2">Oglądaj nagranie</a>
-                      <a href="#download" className="btn btn--primary" data-cursor="#572cf2">Pobierz materiały</a>
+                      <a href="#download" className="btn btn--primary" data-cursor="#572cf2"></a>
                     </div>
                   </article>
                 ))}

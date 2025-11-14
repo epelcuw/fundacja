@@ -19,9 +19,26 @@
 
 .header__brand {
   display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: #f6f7fb;
+}
+
+.header__logo-mark {
+  width: 52px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: rgba(246, 247, 251, 0.1);
+  padding: 0.2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.header__brand-text {
+  display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  color: #f6f7fb;
 }
 
 .header__logo {
@@ -125,7 +142,12 @@
   }
 
   .header__brand {
-    gap: 0.15rem;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .header__brand-text {
+    align-items: flex-start;
   }
 
   .header__nav ul {
