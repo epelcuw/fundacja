@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #50d9d5;
+    outline-offset: 3px;
+}
