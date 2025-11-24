@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import ScrollContainer from './components/ScrollContainer';
 import CustomCursor from './components/CustomCursor';
+import logo from './assets/logo.png';
 
 const commitments = [
   'Wspieramy pacjentów w zrozumieniu diagnozy, planu leczenia i profilaktyki.',
@@ -39,7 +40,7 @@ const podcastEpisodes = [
     title: 'Nikotyna: trucizna czy lek?',
     duration: '48:02',
     description: 'Eksperci psychiatrii i toksykologii o skutecznych strategiach walki z paleniem tytoniuaktyczne wskazówki dla pacjentów i rodzin dotyczące wspólnego podejmowania decyzji terapeutycznych.',
-    url: 'https://example.com/podcast/plan-leczenihttps://www.e-medycyna.pl/nikotyna-trucizna-czy-lek-eksperci-psychiatrii-i-toksykologii-o-skutecznych-strategiach-walki-z-paleniem-tytoniua',
+    url: 'https://www.e-medycyna.pl/nikotyna-trucizna-czy-lek-eksperci-psychiatrii-i-toksykologii-o-skutecznych-strategiach-walki-z-paleniem-tytoniu',
   },
   
 ];
@@ -63,7 +64,7 @@ const projects = [
   },
   {
     title: 'Pediatria – najnowsze rekomendacje i wytyczne.',
-    summary: 'Audyt i wdrażanie standardów komunikacji w pięciu placówkach publicznych.',
+    summary: 'Zwięzłe omówienie aktualnych standardów diagnostyki i leczenia najczęstszych schorzeń wieku dziecięcego. Uczestnicy poznają najświeższe zalecenia ekspertów pediatrii, które można od razu zastosować w codziennej praktyce klinicznej.',
   },
 ];
 
@@ -185,7 +186,7 @@ const App = () => {
           <section id="podcasts" className="section section--podcasts" data-scene="podcasts">
             <div className="section__inner">
               <header className="section__header">
-                <span className="section__eyebrow" data-cursor="#572cf2">Podcasty</span>
+                <span className="section__eyebrow" data-cursor="#572cf2">Podcasty i Webinary</span>
                 <h2 className="section__title">Rozmowy z pacjentami, ekspertami i decydentami.</h2>
                 <p className="section__description">
                   Posłuchaj inspirujących historii bezpośrednio na naszej stronie.
@@ -204,12 +205,12 @@ const App = () => {
                       <span className="podcast-card__duration">{episode.duration}</span>
                       <a
                         href={episode.url}
-                        className="podcast-card__cta"
+                        className="btn btn--primary podcast-card__cta"
                         target="_blank"
                         rel="noreferrer"
                         data-cursor="#572cf2"
                       >
-                        Posłuchaj
+                        Oglądaj
                       </a>
                     </div>
                   </article>
@@ -221,24 +222,13 @@ const App = () => {
           <section id="debates" className="section section--tone-dark" data-scene="debates">
             <div className="section__inner">
               <header className="section__header">
-                <span className="section__eyebrow" data-cursor="#572cf2">Debaty i webinary</span>
+                <span className="section__eyebrow" data-cursor="#572cf2">Debaty i Advisory Boardy</span>
                 <h2 className="section__title">Eksperckie spotkania opiniotwórcze.</h2>
                 <p className="section__description">
                   Analizujemy aktualne wyzwania systemowe i udostępniamy konkretne rekomendacje dla partnerów.
                 </p>
+                {false && <div>To się nigdy nie pokaże</div>}
               </header>
-              <div className="cards cards--grid">
-                {webinarRecords.map((item) => (
-                  <article key={item.title} className="card card--program" data-cursor="#572cf2">
-                    <h3 className="card__title">{item.title}</h3>
-                    <p className="card__description">{item.resources}</p>
-                    <div className="card__actions">
-                      <a href="#watch" className="btn btn--ghost" data-cursor="#572cf2">Oglądaj nagranie</a>
-                      <a href="#download" className="btn btn--primary" data-cursor="#572cf2"></a>
-                    </div>
-                  </article>
-                ))}
-              </div>
             </div>
           </section>
 
@@ -253,7 +243,6 @@ const App = () => {
                   <article key={project.title} className="card card--light" data-cursor="#572cf2">
                     <h3 className="card__title">{project.title}</h3>
                     <p className="card__description">{project.summary}</p>
-                    <a href="#video" className="tag tag--link" data-cursor="#572cf2">Zobacz nagranie</a>
                   </article>
                 ))}
               </div>
@@ -291,7 +280,7 @@ const App = () => {
                 </label>
                 <label>
                   E-mail
-                  <input type="email" name="email" placeholder="nazwa@fundacja.org" required data-cursor="#572cf2" />
+                  <input type="email" name="email" placeholder="nazwa@poczta.pl" required data-cursor="#572cf2" />
                 </label>
                 <label>
                   Temat
@@ -310,15 +299,16 @@ const App = () => {
 
           <footer className="footer" data-cursor="#572cf2">
             <div>
+              <img src={logo} alt="Logo Instytutu" className="footer__logo" data-cursor="#572cf2" />
               <h4>Instytut Wspierania i Edukacji Pacjentów</h4>
               <p>ul. Kasprzaka 6 , 01-211 Warszawa</p>
+              <a href="tel:+48783912124" data-cursor="#572cf2">
+                +48 783 912 124
+              </a>
             </div>
             <div className="footer__links">
               <a href="mailto:kontakt@fundacjapacjencka.org" data-cursor="#572cf2">
-                kontakt@fundacjapacjencka.org
-              </a>
-              <a href="tel:+48" data-cursor="#572cf2">
-                +48 123 456 789
+                kontakt@instytutpacjentow.pl
               </a>
             </div>
           </footer>
