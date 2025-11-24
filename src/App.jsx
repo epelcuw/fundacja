@@ -41,12 +41,7 @@ const podcastEpisodes = [
     description: 'Eksperci psychiatrii i toksykologii o skutecznych strategiach walki z paleniem tytoniuaktyczne wskazówki dla pacjentów i rodzin dotyczące wspólnego podejmowania decyzji terapeutycznych.',
     url: 'https://example.com/podcast/plan-leczenihttps://www.e-medycyna.pl/nikotyna-trucizna-czy-lek-eksperci-psychiatrii-i-toksykologii-o-skutecznych-strategiach-walki-z-paleniem-tytoniua',
   },
-  {
-    title: 'Technologie w służbie pacjenta',
-    duration: '26:48',
-    description: 'Co zmienia telemedycyna i jak przygotować się do zdalnej konsultacji – doświadczenia pacjentów i ekspertów IT.',
-    url: 'https://example.com/podcast/telemedycyna',
-  },
+  
 ];
 
 const webinarRecords = [

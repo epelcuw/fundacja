@@ -39,6 +39,20 @@ body {
 
 .scroll-container {
   padding-top: 6rem;
+  position: relative;
+  background: transparent;
+}
+
+.scroll-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  background: var(--color-canary);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .content {
@@ -360,30 +374,30 @@ body {
 }
 
 .section--tone-dark {
-  --section-color: var(--color-aqua);
+  --section-color: #6ff8f3;
   background: var(--section-color);
-  color: var(--color-ink);
-  --section-title-color: #201725;
-  --btn-bg: rgba(32, 23, 37, 0.08);
-  --btn-border: rgba(32, 23, 37, 0.25);
-  --btn-text: var(--color-ink);
-  --btn-hover-bg: var(--color-accent);
-  --btn-hover-border: var(--color-accent);
+  color: #572cf2;
+  --section-title-color: #572cf2;
+  --btn-bg: rgba(87, 44, 242, 0.12);
+  --btn-border: rgba(87, 44, 242, 0.45);
+  --btn-text: #572cf2;
+  --btn-hover-bg: #572cf2;
+  --btn-hover-border: #572cf2;
   --btn-hover-text: var(--color-paper);
-  --btn-primary-bg: var(--color-accent);
-  --btn-primary-border: var(--color-accent);
+  --btn-primary-bg: #572cf2;
+  --btn-primary-border: #572cf2;
   --btn-primary-text: var(--color-paper);
-  --btn-ghost-border: rgba(32, 23, 37, 0.35);
-  --btn-ghost-text: var(--color-ink);
-  --tag-bg: rgba(32, 23, 37, 0.08);
-  --tag-text: var(--color-ink);
-  --tag-border: rgba(32, 23, 37, 0.2);
-  --tag-hover-bg: rgba(32, 23, 37, 0.16);
-  --tag-hover-border: rgba(32, 23, 37, 0.4);
+  --btn-ghost-border: rgba(87, 44, 242, 0.35);
+  --btn-ghost-text: #572cf2;
+  --tag-bg: rgba(32, 23, 37, 0.15);
+  --tag-text: #201725;
+  --tag-border: rgba(32, 23, 37, 0.25);
+  --tag-hover-bg: rgba(32, 23, 37, 0.22);
+  --tag-hover-border: rgba(32, 23, 37, 0.45);
 }
 
 .section--tone-dark .section__eyebrow {
-  color: var(--color-accent);
+  color: #201725;
 }
 
 .section--podcasts {
