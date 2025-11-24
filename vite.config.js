@@ -7,11 +7,21 @@ export default defineConfig({
     open: true,
   },
   build: {
-    outDir: 'dist',
+    // Output to docs so GitHub Pages can serve from main branch
+    outDir: 'docs',
   },
   resolve: {
     alias: {
       '@': '/src',
+    },
+  },
+  // Fix esbuild trying to use an unsupported "html" loader by treating
+  // imported .html files as plain text during dependency optimization.
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.html': 'text',
+      },
     },
   },
 });
