@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.0",
-    "vite-plugin-glsl": "^1.0.0"
+    "vite-plugin-glsl": "^1.0.0",
+    "wrangler": "^4.50.0"
   },
   "keywords": [
     "react",
